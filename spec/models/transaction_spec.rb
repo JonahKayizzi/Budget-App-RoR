@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe BudgetTransaction, type: :model do
     before :each do
-        @user = User.create(name: 'Microverse')
+        @user = User.create(name: 'Jonah', email: 'jonahkayizzi@gmail.com', password: '123456')
 
         @category = Category.create(name:'Microverse', icon:'microverser.png', user: @user)
 
