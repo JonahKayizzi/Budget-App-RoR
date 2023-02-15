@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="container-header">
+        <div class="category-icon">
+            <img src="<%= @category.icon %>" alt="<%= @category.name %>">
+        </div>
+        <h1 class="text-center"> <%= @category.name %> </h1>
+        <h4 class="text-center"> <%= @total %> </h4>
+    </div>
+    <ul class="transactions">
+        <% @transactions.each do |transaction| %>
+            <li class="transaction">
+                <div class="transaction__name">
+                    <%= transaction.name %>
+                </div>
+                <div class="transaction__amount">
+                    <%= transaction.amount %>
+                </div>
+                <div class="transaction__date">
+                    <%= transaction.created_at %>
+                </div>
+            </li>
+        <% end %>
+        <li class="transaction">
+            <%= link_to 'New Transaction', new_category_transaction_path(@category) %>
+        </li>
+    </ul>
+</div>
