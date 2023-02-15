@@ -4,9 +4,13 @@ RSpec.describe 'Categorys', type: :feature do
     before :each do
         @user = User.create(name: 'Jonah', email: 'jonahkayizzi@gmail.com', password: '123456')
         @category = Category.create(name:'Microverse', icon:'microverser.png', user: @user)
+
+        @transaction = BudgetTransaction.create(name:'Microverse Transaction', amount: 100, user: @user)
+
+        @transaction.categories << @category
     
         sign_in(@user)
-        visit categories_path
+        visit category_path(@category)
     end
 
     describe 'the category index page' do
@@ -22,8 +26,16 @@ RSpec.describe 'Categorys', type: :feature do
             expect(page).to have_content(@category.budget_transactions.sum(:amount))
         end
 
+        it 'displays the transaction name' do
+            expect(page).to have_content(@transaction.name)
+        end
+
+        it 'displays the transaction amount' do
+            expect(page).to have_content(@transaction.amount)
+        end
+
         it 'displays button to add a transaction' do
-            expect(page).to have_link('New Category')
+            expect(page).to have_link('New Transaction')
         end
     end
 end
