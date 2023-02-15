@@ -3,9 +3,6 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.7.7'
 
-# Use active storage [https://guides.rubyonrails.org/active_storage_overview.html]
-gem 'activestorage'
-
 # Use devise for authentication
 gem 'devise'
 
