@@ -15,15 +15,49 @@
  */
 body {
   background-color: rgba(67, 75, 84, 0.05);
+  font-family: 'Proxima Nova Light', system-ui, san-serif;
+}
+
+a {
+  text-decoration: none;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Proxima Nova Light', system-ui, san-serif;
+}
+
+form a {
+  color: #434b54;
+  text-decoration: none;
+  margin-top: 1em;
+}
+
+form .field {
+  width: 100%;
 }
 
 input {
   border: 1px solid #d1d5da;
-  border-radius: 4px;
   padding: 0.5em;
   font-size: 1em;
-  font-family: 'Proxima Nova Light', system-ui, san-serif;
-  width: 100%;
+  height: 2em;
+  width: calc(100% - 1em);
+}
+
+.form-submit {
+  background-color: #5fb523;
+  border: none;
+  padding: 0.5em;
+  width: 50%;
+}
+
+.form-submit input {
+  border: none;
+  background-color: #5fb523;
+  color: #fff;
 }
 
 .splash-screen {
@@ -66,6 +100,32 @@ input {
   background-color: #3778c2;
   height: 50%;
   border-radius: 4px;
+}
+
+.nav-bar {
+  background-color: #3778c2;
+  height: 4em;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 1em;
+  display: flex;
+  justify-content: flex-start;
+  gap: 30%;
+  padding: 0.3em;
+}
+
+.nav-bar a {
+  color: #fff;
+}
+
+.back-arrow {
+  align-self: center;
+}
+
+.login-head {
+  font-weight: 300;
+  font-size: 1.2em;
+  align-self: center;
 }
 
 .login a {
