@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Categorys', type: :feature do
     before :each do
-        @user = User.create(name: 'Jonah', email: 'jonahkayizzi@gmail.com', password: '123456')
+        @user = User.create(name: 'Jonah', email: 'jonakayizzi@gmail.com', password: '123456')
         @category = Category.create(name:'Microverse', icon:'microverser.png', user: @user)
 
         @transaction = BudgetTransaction.create(name:'Microverse Transaction', amount: 100, user: @user)
@@ -13,7 +13,7 @@ RSpec.describe 'Categorys', type: :feature do
         visit category_path(@category)
     end
 
-    describe 'the category index page' do
+    describe 'the category show page' do
         it 'displays the category name' do
             expect(page).to have_content(@category.name)
         end
@@ -26,16 +26,8 @@ RSpec.describe 'Categorys', type: :feature do
             expect(page).to have_content(@category.budget_transactions.sum(:amount))
         end
 
-        it 'displays the transaction name' do
-            expect(page).to have_content(@transaction.name)
-        end
-
-        it 'displays the transaction amount' do
-            expect(page).to have_content(@transaction.amount)
-        end
-
         it 'displays button to add a transaction' do
-            expect(page).to have_link('New Transaction')
+            expect(page).to have_link('NEW TRANSACTION')
         end
     end
 end

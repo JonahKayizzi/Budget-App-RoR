@@ -2,7 +2,7 @@ require 'rails_helper'
 
 RSpec.describe 'Categorys', type: :feature do
     before :each do
-        @user = User.create(name: 'Jonah', email: 'jonahkayizzi@gmail.com', password: '123456')
+        @user = User.create(name: 'Jonah', email: 'jonakayizzi@gmail.com', password: '123456', password_confirmation: '123456')
         @category = Category.create(name:'Microverse', icon:'microverser.png', user: @user)
     
         sign_in(@user)
@@ -23,7 +23,7 @@ RSpec.describe 'Categorys', type: :feature do
         end
 
         it 'displays button to add a transaction' do
-            expect(page).to have_link('New Category')
+            expect(page).to have_link('NEW CATEGORY')
         end
     end
 end
