@@ -9,13 +9,13 @@ class ApplicationController < ActionController::Base
     end
 
     def after_sign_in_path_for(_resoruce)
-      flash[:notice] = "Welcome to Budget For Me!"
+      flash[:notice] = "Welcome to BudgetMe!"
       categories_path
     end
 
-    def after_sign_up_path_for
+    def after_sign_up_path_for(_resoruce)
       flash[:notice] = "Welcome! Your account has been created"
-      root_path
+      redirect_to root_path
     end
   
     protected
