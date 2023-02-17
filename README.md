@@ -105,7 +105,9 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Live Demo link will be added at the end of the project
+> View Video Demo [here](https://www.loom.com/share/97c1cd7acc91468892cb806d8d11615d)
+
+> View Live Demo [here](https://budget-app-r5on.onrender.com) 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
