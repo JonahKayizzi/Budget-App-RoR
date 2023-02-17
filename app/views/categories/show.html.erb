@@ -3,6 +3,9 @@
         <div class="category-icon">
             <img src="<%= @category.icon %>" alt="<%= @category.name %>">
         </div>
+        <div class="signout">
+            <%= button_to 'Sign Out', destroy_user_session_path, method: :delete %>
+        </div>
         <h1 class="text-center"> <%= @category.name %> </h1>
         <h4 class="text-center"> <%= @total %> </h4>
     </div>
