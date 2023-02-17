@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
 
   def after_sign_up_path_for(_resoruce)
     flash[:notice] = 'Welcome! Your account has been created'
-    redirect_to root_path
+    root_path
   end
 
   protected
