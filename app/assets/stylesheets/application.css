@@ -117,7 +117,7 @@ ul {
   margin-bottom: 1em;
   display: flex;
   justify-content: flex-start;
-  gap: 30%;
+  gap: 25%;
   padding: 0.3em;
 }
 
@@ -200,6 +200,11 @@ ul {
   padding: 0.5em;
 }
 
+.app-logo img {
+  width: 60%;
+  border-radius: 50%;
+}
+
 .category a img {
   width: 25%;
 }
@@ -233,4 +238,9 @@ ul {
   width: 60%;
   text-align: center;
   padding: 0.6em;
+}
+
+.app-logo {
+  width: 20%;
+  align-self: center;
 }
