@@ -59,6 +59,7 @@ input {
   border: none;
   background-color: #5fb523;
   color: #fff;
+  height: auto;
 }
 
 .splash-screen {
