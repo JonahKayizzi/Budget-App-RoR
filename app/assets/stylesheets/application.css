@@ -52,6 +52,7 @@ input {
   border: none;
   padding: 0.5em;
   width: 50%;
+  margin-top: 1em;
 }
 
 .form-submit input {
