@@ -47,6 +47,15 @@ input {
   width: calc(100% - 1em);
 }
 
+select {
+  height: auto;
+  border: 1px solid #d1d5da;
+  padding: 0.5em;
+  font-size: 1em;
+  width: 100%;
+  color: #434b54;
+}
+
 ul {
   list-style: none;
   padding: 0;
@@ -274,7 +283,7 @@ ul {
   align-items: center;
 }
 
-.new-category,
+.new-category a,
 .new-transaction a {
   border: #fff 1px solid;
   border-radius: 4px;
