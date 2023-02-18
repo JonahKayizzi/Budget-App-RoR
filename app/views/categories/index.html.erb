@@ -1,0 +1,29 @@
+<div class="nav-bar">
+    <div class="app-logo">
+        <%= image_tag "app-logo.jpg" %>
+    </div>
+    <h2 class="login-head">CATEGORIES </h2>
+</div>
+<div class="notification">
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <div class="signout">
+        <%= button_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
+    </div>
+</div>
+<div class="container">
+    <ul class="categories">
+        <% @categories.each do |category| %>
+        <li class="category">
+            <%= link_to category_path(category) do %>
+                <img src="<%= category.icon %>" alt="<%= category.name %>">
+                <p class="category-name"><%= category.name %></p>
+                <p class="category-total">$ <%= category_total(category) %></p>
+            <% end %>
+        </li>
+        <% end %>
+        <li class="new-category">
+            <%= link_to 'NEW CATEGORY', new_category_path %>
+        </li>
+    </ul>
+</div>

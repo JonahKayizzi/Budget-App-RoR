@@ -1,0 +1,14 @@
+<div class="container splash-screen">
+    <div class="row welcome"> 
+        <%= image_tag "app-logo.jpg" %>  
+        <h1 class="welcome-spash">BudgetMe</h1>
+    </div>
+    <div class="row welcome-actions">
+        <div class="login">
+            <%= link_to 'LOG  IN', new_user_session_path %>
+        </div>
+        <div class="signup">
+            <%= link_to 'SIGN UP', new_user_registration_path %>
+        </div>
+    </div>
+</div>

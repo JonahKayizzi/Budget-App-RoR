@@ -1,0 +1,43 @@
+<div class="nav-bar">
+    <div class="back-arrow">
+        <%= link_to categories_path do %>
+            <i class="fa-regular fa-arrow-left">Back</i>
+        <% end %>
+    </div>
+    <h2 class="login-head"><%= @category.name %> </h2>
+    <h4 class="text-center">$ <%= @total %> </h4>
+</div>
+<div class="notification">
+    <div class="app-logo">
+        <img src="<%= @category.icon %>" alt="<%= @category.name %>">
+    </div>
+    <p class="notice"><%= notice %></p>
+    <p class="alert"><%= alert %></p>
+    <div class="signout">
+        <%= button_to 'SIGN OUT', destroy_user_session_path, method: :delete %>
+    </div>
+</div>
+<div class="container">
+    <ul class="transactions">
+            <li class="transaction trans-title">
+                <p>TRANSACTIONS</p>
+            </li>
+        <% @transactions.each do |transaction| %>
+            <li class="transaction">
+                <div class="transaction__name">
+                    <%= transaction.name %>
+                </div>
+                <div class="transaction__date">
+                    <p>Transaction Date</p>
+                    <%= transaction.created_at %>
+                </div>
+                <div class="transaction__amount">
+                   TRANSACTION AMOUNT: $ <%= transaction.amount %>
+                </div>
+            </li>
+        <% end %>
+        <li class="new-transaction">
+            <%= link_to 'NEW TRANSACTION', new_category_transaction_path(@category) %>
+        </li>
+    </ul>
+</div>
